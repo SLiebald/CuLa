@@ -20,7 +20,6 @@ public class KnowledgeLevelUtils {
      */
     private static final int LEVEL_MAX = 5;
 
-
     /**
      * Resolves the given knowledgeLevel to color.
      *
@@ -28,7 +27,7 @@ public class KnowledgeLevelUtils {
      * @return The color of the given KnowledgeLevel.
      */
     public static int getColorByKnowledgeLevel(double knowledgeLevel) {
-        Resources res = MyApplication.getContext().getResources();
+        Resources res = MyApplication.Companion.getContext().getResources();
         if (knowledgeLevel < 1)
             return ResourcesCompat.getColor(res, R.color.knowledgeLevel_1, null);
         else if (knowledgeLevel < 2)
@@ -63,7 +62,6 @@ public class KnowledgeLevelUtils {
             return res.getString(R.string.knowledgeLevel5);
     }
 
-
     /**
      * Calculates a new KnowledgeLevel depending on whether it should be increased or decreased.
      *
@@ -86,5 +84,4 @@ public class KnowledgeLevelUtils {
         newLevel = Math.round(newLevel * 100D) / 100D;
         return newLevel;
     }
-
 }

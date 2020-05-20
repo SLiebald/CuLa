@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     /**
      * Checks that the active language is set correctly in the sharedPreferences. Also makes sure
      * that if no language is selected the user is forwarded to the settings and given a hint.

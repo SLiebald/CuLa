@@ -17,7 +17,7 @@ public class PreferenceUtils {
      * @return Double that should be added to the Knowledgelevel of the trained word.
      */
     static double getKnowledgeIncrementCorrectTraining() {
-        Context context = MyApplication.getContext();
+        Context context = MyApplication.Companion.getContext();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getInt(context.getString(R.string.
                 settings_reward_correct_training_key), 5) / 10D;
@@ -29,7 +29,7 @@ public class PreferenceUtils {
      * @return Double that should be removed from the Knowledgelevel of the trained word.
      */
     static double getKnowledgeDecrementWrongTraining() {
-        Context context = MyApplication.getContext();
+        Context context = MyApplication.Companion.getContext();
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getInt(context.getString(R.string.
                 settings_punish_wrong_training_key), 5) / 10D;
@@ -41,7 +41,7 @@ public class PreferenceUtils {
      * @return The currently active language.
      */
     public static String getActiveLanguage() {
-        Context context = MyApplication.getContext();
+        Context context = MyApplication.Companion.getContext();
         SharedPreferences preferences =
                 PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getString(context.getString
@@ -54,7 +54,7 @@ public class PreferenceUtils {
      * @param language The currently active language.
      */
     public static void setActiveLanguage(String language) {
-        Context context = MyApplication.getContext();
+        Context context = MyApplication.Companion.getContext();
         SharedPreferences preferences =
                 PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = preferences.edit();
@@ -69,7 +69,7 @@ public class PreferenceUtils {
      * @return The default knowledgelevel as double.
      */
     public static double getDefaultKnowledgeLevel() {
-        Context context = MyApplication.getContext();
+        Context context = MyApplication.Companion.getContext();
         SharedPreferences preferences =
                 PreferenceManager.getDefaultSharedPreferences(context);
         double result;
@@ -82,6 +82,4 @@ public class PreferenceUtils {
         }
         return result;
     }
-
-
 }
