@@ -25,12 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.updateLibrary.UpdateLibraryFragment"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ui.updateLesson.UpdateLessonFragment"
-            android:parentActivityName=".MainActivity" />
 
         <receiver android:name=".widget.CulaWidget">
             <intent-filter>
