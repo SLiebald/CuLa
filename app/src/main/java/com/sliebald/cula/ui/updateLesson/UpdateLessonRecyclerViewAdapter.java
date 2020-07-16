@@ -44,7 +44,7 @@ public class UpdateLessonRecyclerViewAdapter extends RecyclerView.Adapter<Update
     public void onBindViewHolder(@NonNull final UpdateLessonRecyclerViewAdapter.ViewHolder holder, int position) {
         holder.mNativeWord.setText(mValues.get(position).getNativeWord());
         holder.mForeignWord.setText(mValues.get(position).getForeignWord());
-        holder.mPartOfLesson.setChecked(mValues.get(position).partOfLesson);
+        holder.mPartOfLesson.setChecked(mValues.get(position).isPartOfLesson());
         holder.viewLayout.setBackgroundColor(KnowledgeLevelUtils.getColorByKnowledgeLevel(mValues.get(position).getKnowledgeLevel()));
     }
 
