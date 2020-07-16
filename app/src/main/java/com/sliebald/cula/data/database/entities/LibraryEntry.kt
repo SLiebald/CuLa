@@ -34,6 +34,7 @@ data class LibraryEntry(
         var lastUpdated: Date
 ) {
 
+    // TODO: remove secondary constructors in favor of using named arguments when the codebase is all kotlin
     @Ignore
     constructor(
             nativeWord: String,
@@ -43,6 +44,7 @@ data class LibraryEntry(
             lastUpdated: Date
     ) : this(0, nativeWord, foreignWord, language, knowledgeLevel, lastUpdated)
 
+    // TODO: remove secondary constructors in favor of using named arguments when the codebase is all kotlin
     @Ignore
     constructor(
             nativeWord: String,
