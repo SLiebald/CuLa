@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Entities;
+package com.sliebald.cula.data.database.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

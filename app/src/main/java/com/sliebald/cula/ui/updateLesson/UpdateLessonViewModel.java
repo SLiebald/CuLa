@@ -10,9 +10,9 @@ import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Entities.LessonEntry;
-import com.sliebald.cula.data.database.Entities.LessonMappingEntry;
-import com.sliebald.cula.data.database.Pojos.MappingPOJO;
+import com.sliebald.cula.data.database.entities.LessonEntry;
+import com.sliebald.cula.data.database.entities.LessonMappingEntry;
+import com.sliebald.cula.data.database.pojos.MappingPOJO;
 import com.sliebald.cula.utilities.InjectorUtils;
 import com.sliebald.cula.utilities.PreferenceUtils;
 import com.sliebald.cula.utilities.SortUtils;

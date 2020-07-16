@@ -20,7 +20,7 @@ import androidx.navigation.Navigation;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.sliebald.cula.R;
-import com.sliebald.cula.data.database.Pojos.TrainingData;
+import com.sliebald.cula.data.database.pojos.TrainingData;
 import com.sliebald.cula.databinding.FragmentTrainingBinding;
 import com.sliebald.cula.utilities.KeyboardUtils;
 

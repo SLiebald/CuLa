@@ -1,11 +1,11 @@
-package com.sliebald.cula.data.database.Pojos;
+package com.sliebald.cula.data.database.pojos;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-import com.sliebald.cula.data.database.Entities.LibraryEntry;
+import com.sliebald.cula.data.database.entities.LibraryEntry;
 
 import java.util.ArrayList;
 import java.util.List;

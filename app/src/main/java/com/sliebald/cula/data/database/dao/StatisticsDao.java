@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Dao;
+package com.sliebald.cula.data.database.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,11 +7,11 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.sliebald.cula.data.database.CulaDatabase;
-import com.sliebald.cula.data.database.Entities.StatisticEntry;
-import com.sliebald.cula.data.database.Pojos.LessonKnowledgeLevel;
-import com.sliebald.cula.data.database.Pojos.StatisticsActivityEntry;
-import com.sliebald.cula.data.database.Pojos.StatisticsLastTrainingDate;
-import com.sliebald.cula.data.database.Pojos.StatisticsLibraryWordCount;
+import com.sliebald.cula.data.database.entities.StatisticEntry;
+import com.sliebald.cula.data.database.pojos.LessonKnowledgeLevel;
+import com.sliebald.cula.data.database.pojos.StatisticsActivityEntry;
+import com.sliebald.cula.data.database.pojos.StatisticsLastTrainingDate;
+import com.sliebald.cula.data.database.pojos.StatisticsLibraryWordCount;
 
 import java.util.Date;
 import java.util.List;

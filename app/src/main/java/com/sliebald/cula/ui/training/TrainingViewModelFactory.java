@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Pojos.TrainingData;
+import com.sliebald.cula.data.database.pojos.TrainingData;
 import com.sliebald.cula.utilities.InjectorUtils;
 
 class TrainingViewModelFactory extends ViewModelProvider.NewInstanceFactory {

@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Dao;
+package com.sliebald.cula.data.database.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -9,7 +9,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.sliebald.cula.data.database.CulaDatabase;
-import com.sliebald.cula.data.database.Entities.LibraryEntry;
+import com.sliebald.cula.data.database.entities.LibraryEntry;
 
 import java.util.List;
 

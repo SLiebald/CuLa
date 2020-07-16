@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Pojos;
+package com.sliebald.cula.data.database.pojos;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Ignore;

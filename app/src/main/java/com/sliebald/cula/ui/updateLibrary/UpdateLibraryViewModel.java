@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Entities.LibraryEntry;
+import com.sliebald.cula.data.database.entities.LibraryEntry;
 import com.sliebald.cula.utilities.InjectorUtils;
 import com.sliebald.cula.utilities.PreferenceUtils;
 

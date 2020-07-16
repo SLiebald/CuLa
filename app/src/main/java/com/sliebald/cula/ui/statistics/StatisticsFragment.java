@@ -27,8 +27,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.sliebald.cula.R;
-import com.sliebald.cula.data.database.Pojos.StatisticsActivityEntry;
-import com.sliebald.cula.data.database.Pojos.StatisticsLibraryWordCount;
+import com.sliebald.cula.data.database.pojos.StatisticsActivityEntry;
+import com.sliebald.cula.data.database.pojos.StatisticsLibraryWordCount;
 import com.sliebald.cula.databinding.FragmentStatisticsBinding;
 import com.sliebald.cula.utilities.KnowledgeLevelUtils;
 

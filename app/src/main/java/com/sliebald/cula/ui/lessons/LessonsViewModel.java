@@ -7,7 +7,7 @@ import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Entities.LessonEntry;
+import com.sliebald.cula.data.database.entities.LessonEntry;
 import com.sliebald.cula.utilities.InjectorUtils;
 import com.sliebald.cula.utilities.SortUtils;
 

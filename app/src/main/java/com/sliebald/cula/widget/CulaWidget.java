@@ -17,8 +17,8 @@ import androidx.lifecycle.Observer;
 import com.sliebald.cula.MainActivity;
 import com.sliebald.cula.R;
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Pojos.LessonKnowledgeLevel;
-import com.sliebald.cula.data.database.Pojos.StatisticsLastTrainingDate;
+import com.sliebald.cula.data.database.pojos.LessonKnowledgeLevel;
+import com.sliebald.cula.data.database.pojos.StatisticsLastTrainingDate;
 import com.sliebald.cula.utilities.InjectorUtils;
 
 import java.util.Date;

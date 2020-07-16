@@ -11,7 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.mikepenz.fontawesome_typeface_library.FontAwesome
 import com.mikepenz.iconics.IconicsDrawable
-import com.sliebald.cula.data.database.Entities.LanguageEntry
+import com.sliebald.cula.data.database.entities.LanguageEntry
 import com.sliebald.cula.databinding.MainActivityBinding
 import com.sliebald.cula.utilities.KeyboardUtils
 import com.sliebald.cula.utilities.PreferenceUtils

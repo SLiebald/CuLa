@@ -7,15 +7,15 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import com.sliebald.cula.data.database.Dao.LanguageDao;
-import com.sliebald.cula.data.database.Dao.LessonDao;
-import com.sliebald.cula.data.database.Dao.LibraryDao;
-import com.sliebald.cula.data.database.Dao.StatisticsDao;
-import com.sliebald.cula.data.database.Entities.LanguageEntry;
-import com.sliebald.cula.data.database.Entities.LessonEntry;
-import com.sliebald.cula.data.database.Entities.LessonMappingEntry;
-import com.sliebald.cula.data.database.Entities.LibraryEntry;
-import com.sliebald.cula.data.database.Entities.StatisticEntry;
+import com.sliebald.cula.data.database.dao.LanguageDao;
+import com.sliebald.cula.data.database.dao.LessonDao;
+import com.sliebald.cula.data.database.dao.LibraryDao;
+import com.sliebald.cula.data.database.dao.StatisticsDao;
+import com.sliebald.cula.data.database.entities.LanguageEntry;
+import com.sliebald.cula.data.database.entities.LessonEntry;
+import com.sliebald.cula.data.database.entities.LessonMappingEntry;
+import com.sliebald.cula.data.database.entities.LibraryEntry;
+import com.sliebald.cula.data.database.entities.StatisticEntry;
 
 /**
  * The Room Database for the App.

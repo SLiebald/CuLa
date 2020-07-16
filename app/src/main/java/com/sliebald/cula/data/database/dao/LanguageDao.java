@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Dao;
+package com.sliebald.cula.data.database.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -8,7 +8,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.sliebald.cula.data.database.CulaDatabase;
-import com.sliebald.cula.data.database.Entities.LanguageEntry;
+import com.sliebald.cula.data.database.entities.LanguageEntry;
 
 import java.util.List;
 

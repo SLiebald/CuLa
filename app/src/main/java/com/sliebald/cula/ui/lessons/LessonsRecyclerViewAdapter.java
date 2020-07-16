@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sliebald.cula.R;
-import com.sliebald.cula.data.database.Entities.LessonEntry;
+import com.sliebald.cula.data.database.entities.LessonEntry;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -18,7 +18,7 @@ import androidx.preference.SeekBarPreference;
 import com.google.android.material.snackbar.Snackbar;
 import com.sliebald.cula.R;
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Entities.LanguageEntry;
+import com.sliebald.cula.data.database.entities.LanguageEntry;
 import com.sliebald.cula.utilities.InjectorUtils;
 
 import java.util.List;

@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.sliebald.cula.data.CulaRepository;
-import com.sliebald.cula.data.database.Pojos.StatisticsActivityEntry;
-import com.sliebald.cula.data.database.Pojos.StatisticsLibraryWordCount;
+import com.sliebald.cula.data.database.pojos.StatisticsActivityEntry;
+import com.sliebald.cula.data.database.pojos.StatisticsLibraryWordCount;
 import com.sliebald.cula.ui.updateLibrary.UpdateLibraryFragment;
 import com.sliebald.cula.utilities.InjectorUtils;
 

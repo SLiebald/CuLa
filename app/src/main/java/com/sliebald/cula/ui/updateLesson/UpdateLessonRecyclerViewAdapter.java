@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sliebald.cula.R;
-import com.sliebald.cula.data.database.Pojos.MappingPOJO;
+import com.sliebald.cula.data.database.pojos.MappingPOJO;
 import com.sliebald.cula.utilities.KnowledgeLevelUtils;
 
 import java.util.ArrayList;

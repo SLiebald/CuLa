@@ -24,7 +24,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.sliebald.cula.R;
-import com.sliebald.cula.data.database.Entities.LessonEntry;
+import com.sliebald.cula.data.database.entities.LessonEntry;
 import com.sliebald.cula.databinding.FragmentLessonsBinding;
 import com.sliebald.cula.utilities.SortUtils;
 

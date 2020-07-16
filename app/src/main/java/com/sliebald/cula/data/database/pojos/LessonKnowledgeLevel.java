@@ -1,4 +1,4 @@
-package com.sliebald.cula.data.database.Pojos;
+package com.sliebald.cula.data.database.pojos;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -18,7 +18,7 @@ public class LessonKnowledgeLevel {
 
     /**
      * Average of KnowledgeLevel of all
-     * {@link com.sliebald.cula.data.database.Entities.LibraryEntry}s assigned to the
+     * {@link com.sliebald.cula.data.database.entities.LibraryEntry}s assigned to the
      * lesson.
      */
     @ColumnInfo(name = "average")
