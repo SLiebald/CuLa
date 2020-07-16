@@ -10,7 +10,7 @@ import java.util.*
  * @param language The foreign language.
  * @param isActive Whether this language is the currently active language.
  */
-@ExperimentalStdlibApi // required for capitalize
+@OptIn(ExperimentalStdlibApi::class) // used for capitalized, can be removed in the future
 @Entity(tableName = "language")
 data class LanguageEntry(@PrimaryKey var language: String, val isActive: Boolean) {
     init {
