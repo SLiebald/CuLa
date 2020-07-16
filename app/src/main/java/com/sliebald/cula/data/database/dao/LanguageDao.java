@@ -21,7 +21,7 @@ public interface LanguageDao {
 
     /**
      * Inserts a {@link LanguageEntry} into the language table. If there is a conflicting id the
-     * {@link LanguageEntry} uses the {@link OnConflictStrategy} to abort if the the
+     * {@link LanguageEntry} uses the {@link OnConflictStrategy} to abort if the
      * {@link LanguageEntry} already exists.
      * The required uniqueness of these values is defined in the {@link LanguageEntry}.
      *

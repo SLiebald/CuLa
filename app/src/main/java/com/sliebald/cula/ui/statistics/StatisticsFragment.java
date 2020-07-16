@@ -96,7 +96,7 @@ public class StatisticsFragment extends Fragment {
         List<StatisticsActivityEntry> fullList = new ArrayList<>();
         int index = 0;
         for (String date : getLastDaysAsString()) {
-            if (activityList != null && activityList.size() > index && activityList.get(index).date.equals(date)) {
+            if (activityList != null && activityList.size() > index && activityList.get(index).getDate().equals(date)) {
                 fullList.add(activityList.get(index));
                 index++;
             } else {
@@ -220,8 +220,8 @@ public class StatisticsFragment extends Fragment {
 
         for (StatisticsLibraryWordCount entry : libraryWordCountList) {
             counts.add(new PieEntry((float) entry.getCount(), KnowledgeLevelUtils
-                    .getNameByKnowledgeLevel(context, entry.level)));
-            colors.add(KnowledgeLevelUtils.getColorByKnowledgeLevel(entry.level));
+                    .getNameByKnowledgeLevel(context, entry.getLevel())));
+            colors.add(KnowledgeLevelUtils.getColorByKnowledgeLevel(entry.getLevel()));
 
         }
 

@@ -76,11 +76,11 @@ public class CulaWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
 
         String text;
-        if (date == null || date.lastActive == null) {
+        if (date == null || date.getLastActive() == null) {
             text = context.getString(R.string.widget_last_learned_never);
             Log.d(TAG, "date null");
         } else {
-            long hoursSinceLastLearned = (new Date().getTime() - date.lastActive.getTime()) /
+            long hoursSinceLastLearned = (new Date().getTime() - date.getLastActive().getTime()) /
                     (1000 * 60 * 60);
             if (hoursSinceLastLearned < 24)
                 text = context.getString(R.string.widget_last_learned_recently);
@@ -90,7 +90,7 @@ public class CulaWidget extends AppWidgetProvider {
                 text = context.getString(R.string.widget_last_learned_last_7_days);
             else
                 text = context.getString(R.string.widget_last_learned_not);
-            Log.d(TAG, "date of last activity: " + date.lastActive.toString());
+            Log.d(TAG, "date of last activity: " + date.getLastActive().toString());
         }
         views.setTextViewText(R.id.tv_widget_last_learned, text);
 
@@ -116,9 +116,9 @@ public class CulaWidget extends AppWidgetProvider {
         else {
             views.setViewVisibility(R.id.tv_widget_lesson_proposal, View.VISIBLE);
             views.setTextViewText(R.id.tv_widget_lesson_proposal, context.getString(R.string
-                    .widget_lesson_proposal, lessonKnowledgeLevel.lessonName));
-            Log.d(TAG, "Worst Lesson: " + lessonKnowledgeLevel.lessonName + " average: " +
-                    "" + lessonKnowledgeLevel.average);
+                    .widget_lesson_proposal, lessonKnowledgeLevel.getLessonName()));
+            Log.d(TAG, "Worst Lesson: " + lessonKnowledgeLevel.getLessonName() + " average: " +
+                    "" + lessonKnowledgeLevel.getAverage());
         }
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
