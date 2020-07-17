@@ -26,12 +26,12 @@ import java.util.*
         indices = [Index(value = ["language"])]
 )
 data class LibraryEntry(
-        @PrimaryKey(autoGenerate = true) val id: Int = 0,
         val nativeWord: String,
         val foreignWord: String,
         val language: String,
         var knowledgeLevel: Double,
-        var lastUpdated: Date
+        var lastUpdated: Date = Date(),
+        @PrimaryKey(autoGenerate = true) val id: Int = 0
 ) {
 
     // TODO: remove secondary constructors in favor of using named arguments when the codebase is all kotlin
@@ -42,7 +42,7 @@ data class LibraryEntry(
             language: String,
             knowledgeLevel: Double,
             lastUpdated: Date
-    ) : this(0, nativeWord, foreignWord, language, knowledgeLevel, lastUpdated)
+    ) : this(nativeWord, foreignWord, language, knowledgeLevel, lastUpdated, 0)
 
     // TODO: remove secondary constructors in favor of using named arguments when the codebase is all kotlin
     @Ignore

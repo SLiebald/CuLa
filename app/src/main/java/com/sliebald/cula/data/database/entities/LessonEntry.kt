@@ -22,10 +22,10 @@ import androidx.room.*
         ],
         indices = [Index(value = ["language"])])
 data class LessonEntry(
-        @PrimaryKey(autoGenerate = true) val id: Int = 0,
         val lessonName: String,
         val lessonDescription: String,
-        val language: String
+        val language: String,
+        @PrimaryKey(autoGenerate = true) val id: Int = 0
 ) {
     // TODO: remove secondary constructors in favor of using named arguments when the codebase is all kotlin
     @Ignore
@@ -33,6 +33,6 @@ data class LessonEntry(
             lessonName: String,
             lessonDescription: String,
             language: String
-    ) : this(0, lessonName, lessonDescription, language)
+    ) : this(lessonName, lessonDescription, language, 0)
 
 }

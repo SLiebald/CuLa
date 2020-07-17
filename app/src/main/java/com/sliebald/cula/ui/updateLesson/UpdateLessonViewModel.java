@@ -143,8 +143,8 @@ public class UpdateLessonViewModel extends ViewModel implements CulaRepository
                     lessonDescription, language));
         } else {
             Log.d(TAG, "Inserting new lesson");
-            mCulaRepository.updateLessonEntry(new LessonEntry(lessonIdValue, lessonName,
-                    lessonDescription, language));
+            mCulaRepository.updateLessonEntry(new LessonEntry(lessonName, lessonDescription, language, lessonIdValue
+            ));
 //            updateViewModel(lessonId);
         }
         return lessonIdValue < 0;

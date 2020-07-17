@@ -104,40 +104,40 @@ public class CulaRepository {
 //        mExecutors.diskIO().execute(mLibraryDao::deleteAll);
         insertLanguageEntry(new LanguageEntry("German", true));
         insertLanguageEntry(new LanguageEntry("Greek", false));
-        insertLibraryEntry(new LibraryEntry(1, "Bread", "Brot", "German", 1.1, new Date()));
-        insertLibraryEntry(new LibraryEntry(2, "Apple", "Apfel", "German", 2.2, new Date()));
-        insertLibraryEntry(new LibraryEntry(3, "Banana", "Banane", "German", 3.3, new Date()));
-        insertLibraryEntry(new LibraryEntry(4, "Pear", "Birne", "German", 0.5, new Date()));
-        insertLibraryEntry(new LibraryEntry(5, "Blackberry", "Brombeere", "German", 4.8,
-                new Date()));
-        insertLibraryEntry(new LibraryEntry(6, "native6", "foreign6", "Greek", 2, new Date()));
-        insertLibraryEntry(new LibraryEntry(7, "native7", "foreign7", "Greek", 4, new Date()));
-        insertLibraryEntry(new LibraryEntry(8, "native8", "foreign8", "Greek", 4, new Date()));
-        insertLibraryEntry(new LibraryEntry(9, "Strawberry", "Erdbeere", "German", 1, new Date()));
-        insertLibraryEntry(new LibraryEntry(10, "Peanut", "Erdnuss", "German", 4, new Date()));
-        insertLibraryEntry(new LibraryEntry(11, "Raspberry", "Himbeeere", "German", 4.7,
-                new Date()));
-        insertLibraryEntry(new LibraryEntry(12, "Cherry", "Kirsche", "German", 2.1, new Date()));
-        insertLibraryEntry(new LibraryEntry(13, "Bedroom", "Schlafzimmer", "German", 3.3,
-                new Date()));
-        insertLibraryEntry(new LibraryEntry(14, "Living room", "Wohnzimmer", "German", 3.8,
-                new Date()));
-        insertLibraryEntry(new LibraryEntry(15, "Bath", "Bad", "German", 1.6, new Date()));
-        insertLibraryEntry(new LibraryEntry(16, "bath2", "bad2", "German", 1.6, new Date()));
+        insertLibraryEntry(new LibraryEntry("Bread", "Brot", "German", 1.1, new Date(), 1));
+        insertLibraryEntry(new LibraryEntry("Apple", "Apfel", "German", 2.2, new Date(), 2));
+        insertLibraryEntry(new LibraryEntry("Banana", "Banane", "German", 3.3, new Date(), 3));
+        insertLibraryEntry(new LibraryEntry("Pear", "Birne", "German", 0.5, new Date(), 4));
+        insertLibraryEntry(new LibraryEntry("Blackberry", "Brombeere", "German", 4.8, new Date(), 5
+        ));
+        insertLibraryEntry(new LibraryEntry("native6", "foreign6", "Greek", 2, new Date(), 6));
+        insertLibraryEntry(new LibraryEntry("native7", "foreign7", "Greek", 4, new Date(), 7));
+        insertLibraryEntry(new LibraryEntry("native8", "foreign8", "Greek", 4, new Date(), 8));
+        insertLibraryEntry(new LibraryEntry("Strawberry", "Erdbeere", "German", 1, new Date(), 9));
+        insertLibraryEntry(new LibraryEntry("Peanut", "Erdnuss", "German", 4, new Date(), 10));
+        insertLibraryEntry(new LibraryEntry("Raspberry", "Himbeeere", "German", 4.7, new Date(), 11
+        ));
+        insertLibraryEntry(new LibraryEntry("Cherry", "Kirsche", "German", 2.1, new Date(), 12));
+        insertLibraryEntry(new LibraryEntry("Bedroom", "Schlafzimmer", "German", 3.3, new Date(), 13
+        ));
+        insertLibraryEntry(new LibraryEntry("Living room", "Wohnzimmer", "German", 3.8, new Date(), 14
+        ));
+        insertLibraryEntry(new LibraryEntry("Bath", "Bad", "German", 1.6, new Date(), 15));
+        insertLibraryEntry(new LibraryEntry("bath2", "bad2", "German", 1.6, new Date(), 16));
 
 
         OnLessonEntryAddedListener dummyListener = ids -> {
         };
-        insertLessonEntry(dummyListener, new LessonEntry(1, "Fruits", "This lesson contains all " +
-                "fruits", "German"));
-        insertLessonEntry(dummyListener, new LessonEntry(2, "Rooms", "This lesson " +
-                "contains rooms", "German"));
-        insertLessonEntry(dummyListener, new LessonEntry(3, "Test Lesson 3", "This lesson is for " +
-                "testing purposes", "Greek"));
-        insertLessonEntry(dummyListener, new LessonEntry(4, "Everything", "This lesson " +
-                "contains all German words", "German"));
-        insertLessonEntry(dummyListener, new LessonEntry(5, "everything", "This lesson " +
-                "contains all German words", "German"));
+        insertLessonEntry(dummyListener, new LessonEntry("Fruits", "This lesson contains all " +
+                "fruits", "German", 1));
+        insertLessonEntry(dummyListener, new LessonEntry("Rooms", "This lesson " +
+                "contains rooms", "German", 2));
+        insertLessonEntry(dummyListener, new LessonEntry("Test Lesson 3", "This lesson is for " +
+                "testing purposes", "Greek", 3));
+        insertLessonEntry(dummyListener, new LessonEntry("Everything", "This lesson " +
+                "contains all German words", "German", 4));
+        insertLessonEntry(dummyListener, new LessonEntry("everything", "This lesson " +
+                "contains all German words", "German", 5));
 
         insertLessonMappingEntry(new LessonMappingEntry(1, 1, 1));
         insertLessonMappingEntry(new LessonMappingEntry(2, 1, 2));

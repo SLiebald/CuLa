@@ -58,7 +58,7 @@ public class UpdateLibraryViewModel extends ViewModel {
      */
     void commitEntry(String nativeWord, String foreignWord, double selectedKnowledgeLevel) {
         if (entry != null && entry.getValue() != null) {
-            mRepository.updateLibraryEntry(new LibraryEntry(entry.getValue().getId(), nativeWord, foreignWord, entry.getValue().getLanguage(), selectedKnowledgeLevel, new Date()));
+            mRepository.updateLibraryEntry(new LibraryEntry(nativeWord, foreignWord, entry.getValue().getLanguage(), selectedKnowledgeLevel, new Date(), entry.getValue().getId()));
         } else {
             mRepository.insertLibraryEntry(new LibraryEntry(nativeWord, foreignWord, PreferenceUtils.getActiveLanguage(), selectedKnowledgeLevel));
         }
