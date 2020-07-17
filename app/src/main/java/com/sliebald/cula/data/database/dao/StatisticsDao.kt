@@ -1,41 +1,36 @@
-package com.sliebald.cula.data.database.dao;
+package com.sliebald.cula.data.database.dao
 
-import androidx.lifecycle.LiveData;
-import androidx.room.Dao;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
-import androidx.room.Query;
-
-import com.sliebald.cula.data.database.CulaDatabase;
-import com.sliebald.cula.data.database.entities.StatisticEntry;
-import com.sliebald.cula.data.database.pojos.LessonKnowledgeLevel;
-import com.sliebald.cula.data.database.pojos.StatisticsActivityEntry;
-import com.sliebald.cula.data.database.pojos.StatisticsLastTrainingDate;
-import com.sliebald.cula.data.database.pojos.StatisticsLibraryWordCount;
-
-import java.util.Date;
-import java.util.List;
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.sliebald.cula.data.database.entities.StatisticEntry
+import com.sliebald.cula.data.database.pojos.LessonKnowledgeLevel
+import com.sliebald.cula.data.database.pojos.StatisticsActivityEntry
+import com.sliebald.cula.data.database.pojos.StatisticsLastTrainingDate
+import com.sliebald.cula.data.database.pojos.StatisticsLibraryWordCount
+import java.util.*
 
 /**
- * {@link Dao} which provides an api for all data operations with the {@link CulaDatabase}
- * related to the {@link StatisticEntry}s.
+ * [Dao] which provides an api for all data operations with the [CulaDatabase]
+ * related to the [StatisticEntry]s.
  */
 @Dao
-public interface StatisticsDao {
-
+interface StatisticsDao {
     /**
-     * Inserts a {@link StatisticEntry} into the statistics table.
+     * Inserts a [StatisticEntry] into the statistics table.
      *
-     * @param statisticEntries A list of {@link StatisticEntry}s to insert
+     * @param statisticEntries A list of [StatisticEntry]s to insert
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertEntry(StatisticEntry... statisticEntries);
+    fun insertEntry(vararg statisticEntries: StatisticEntry)
 
     /**
      * Groups all entries in the library table of the database by knowledgeLevel and counts how
      * many entries are in each category (0-0.99999, 1-1.999999,...,4-5)
      *
-     * @return The result as {@link List} of {@link StatisticsLibraryWordCount}, {@link List}
+     * @return The result as [List] of [StatisticsLibraryWordCount], [List]
      * size depending on the amount of KnowledgeLevel ranges with words in it.
      */
     //TODO: find a way to avoid showing 'level' as invalid, it is just the defined name (AS level)
@@ -51,26 +46,23 @@ public interface StatisticsDao {
             "FROM library " +
             "WHERE language = (SELECT language FROM language WHERE isActive=1 LIMIT 1) " +
             "GROUP BY `level`")
-    LiveData<List<StatisticsLibraryWordCount>> getStatisticsLibraryCountByKnowledgeLevel();
-
+    fun getStatisticsLibraryCountByKnowledgeLevel(): LiveData<List<StatisticsLibraryWordCount>>
 
     /**
      * Returns the activity of the user after the given date. For each active day a
-     * {@link StatisticsActivityEntry} is added to the list. Days without activity have no entry.
+     * [StatisticsActivityEntry] is added to the list. Days without activity have no entry.
      *
      * @param date The date after which the activity should be queried.
-     * @return The List of {@link StatisticsActivityEntry} for all active days.
+     * @return The List of [StatisticsActivityEntry] for all active days.
      */
-    //Based on https://stackoverflow.com/questions/40199091/group-by-day-when-column-is-in
-    // -unix timestamp
+    //Based on https://stackoverflow.com/questions/40199091/group-by-day-when-column-is-in-unix timestamp
     @Query("SELECT strftime('%Y-%m-%d', trainingDate / 1000, 'unixepoch') as date, " +
             "COUNT(*) as activity " +
             "FROM statistics " +
             "WHERE trainingDate>:date " +
             "GROUP BY strftime('%Y-%m-%d', trainingDate / 1000, 'unixepoch')" +
             "ORDER BY strftime('%Y-%m-%d', trainingDate / 1000, 'unixepoch') ASC")
-    LiveData<List<StatisticsActivityEntry>> getStatisticsActivity(Date date);
-
+    fun getStatisticsActivity(date: Date): LiveData<List<StatisticsActivityEntry>>
 
     /**
      * Get the date of the last training.
@@ -78,8 +70,7 @@ public interface StatisticsDao {
      * @return Date of the last training.
      */
     @Query("SELECT max(trainingDate) AS lastActive FROM statistics ")
-    LiveData<StatisticsLastTrainingDate> getLastTrainingDate();
-
+    fun getLastTrainingDate(): LiveData<StatisticsLastTrainingDate>
 
     /**
      * Returns the lesson with the lowest KnowledgeLevel
@@ -93,5 +84,5 @@ public interface StatisticsDao {
             "GROUP BY lessonName " +
             "ORDER BY avg(knowledgeLevel) ASC " +
             "LIMIT 1")
-    LiveData<LessonKnowledgeLevel> getWorstLesson();
+    fun getWorstLesson(): LiveData<LessonKnowledgeLevel>
 }

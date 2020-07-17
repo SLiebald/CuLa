@@ -212,20 +212,17 @@ public class CulaRepository {
                 - 86400000 * 10)));
         //print the current entries in the db to the log console.
         mExecutors.diskIO().execute(() ->
-                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLibraryDao
-                        .getLibrarySize() + " library entries")
+                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLibraryDao.getLibrarySize() + " library entries")
         );
         mExecutors.diskIO().execute(() ->
                 Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLanguageDao
                         .getAmountOfLanguages() + " language entries")
         );
         mExecutors.diskIO().execute(() ->
-                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLessonDao
-                        .getAmountOfLessons() + " lesson entries")
+                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLessonDao.getAmountOfLessons() + " lesson entries")
         );
         mExecutors.diskIO().execute(() ->
-                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLessonDao
-                        .getAmountOfLessonsMappings() + " lesson mapping entries")
+                Log.d(CulaRepository.class.getSimpleName(), "Database has now " + mLessonDao.getAmountOfLessonsMappings() + " lesson mapping entries")
         );
 
     }

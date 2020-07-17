@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         // Create the AppBarConfiguration for the drawer
-        mAppBarConfiguration = AppBarConfiguration.Builder(tlds).setDrawerLayout(mBinding.drawerLayout).build()
+        mAppBarConfiguration = AppBarConfiguration.Builder(tlds).setOpenableLayout(mBinding.drawerLayout).build()
 
         //setup navigation
         setSupportActionBar(toolbar)
