@@ -161,16 +161,16 @@ public class UpdateLessonViewModel extends ViewModel implements CulaRepository
     /**
      * Insert or deletes the selected {@link LessonMappingEntry}.
      *
-     * @param insert If true insert the entry, otherwise delete it.
-     * @param id     Id of the {@link LessonMappingEntry} to add or delete.
+     * @param insert         If true insert the entry, otherwise delete it.
+     * @param libraryEntryId Id of the {@link com.sliebald.cula.data.database.entities.LibraryEntry} to add or delete from the current lesson.
      */
-    void insertOrDeleteLessonMappingEntry(boolean insert, int id) {
+    void insertOrDeleteLessonMappingEntry(boolean insert, int libraryEntryId) {
         if (entry.getValue() == null)
             return;
         if (insert) {
-            mCulaRepository.insertLessonMappingEntry(new LessonMappingEntry(entry.getValue().getId(), id));
+            mCulaRepository.insertLessonMappingEntry(new LessonMappingEntry(entry.getValue().getId(), libraryEntryId));
         } else {
-            mCulaRepository.deleteLessonMappingEntry(new LessonMappingEntry(entry.getValue().getId(), id));
+            mCulaRepository.deleteLessonMappingEntry(new LessonMappingEntry(entry.getValue().getId(), libraryEntryId));
         }
     }
 
