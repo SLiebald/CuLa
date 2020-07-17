@@ -18,7 +18,7 @@ public class InjectorUtils {
      */
     //TODO: refactor with proper injection
     public static CulaRepository provideRepository() {
-        CulaDatabase database = CulaDatabase.getInstance(MyApplication.Companion.getContext());
+        CulaDatabase database = CulaDatabase.Companion.getInstance(MyApplication.Companion.getContext());
         AppExecutors executors = AppExecutors.getInstance();
         return CulaRepository.getInstance(database, executors);
     }
