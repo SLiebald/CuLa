@@ -1,10 +1,10 @@
 package com.sliebald.cula
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mNavController: NavController
     private lateinit var mAppBarConfiguration: AppBarConfiguration
     private lateinit var mBinding: MainActivityBinding
+    private val mViewModel:MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.main_activity)
         val toolbar = mBinding.toolbar
-        val mViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         //check whether there is a language set as active.
-        mViewModel.activeLanguage.observe(this, Observer { languageEntry: LanguageEntry? -> checkActiveLanguage(languageEntry) })
+        mViewModel.activeLanguage.observe(this, Observer(this::checkActiveLanguage))
 
         // setup drawer icons
         val menu = mBinding.navView.menu

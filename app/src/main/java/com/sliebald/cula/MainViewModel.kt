@@ -6,5 +6,5 @@ import com.sliebald.cula.data.database.entities.LanguageEntry
 import com.sliebald.cula.utilities.InjectorUtils
 
 class MainViewModel : ViewModel() {
-    val activeLanguage: LiveData<LanguageEntry> = InjectorUtils.provideRepository().activeLanguage
+    val activeLanguage: LiveData<LanguageEntry?> = InjectorUtils.provideRepository().getActiveLanguage()
 }

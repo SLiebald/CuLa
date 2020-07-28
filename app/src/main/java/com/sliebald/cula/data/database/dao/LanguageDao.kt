@@ -50,7 +50,7 @@ interface LanguageDao {
      * @return [LiveData] with the active @[LanguageEntry]s. Null if none is active.
      */
     @Query("SELECT language, isActive FROM language WHERE isActive=1 LIMIT 1")
-    fun getActiveLanguage(): LiveData<LanguageEntry>
+    fun getActiveLanguage(): LiveData<LanguageEntry?>
 
     /**
      * Updates a [LanguageEntry] in the language table.
